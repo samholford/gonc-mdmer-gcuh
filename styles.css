@@ -1,0 +1,92 @@
+body, h1, textarea, button {
+  font-family: 'Press Start 2P', OCR A Extended, arial;
+  font-weight: bold;
+  margin: 1em;
+}
+
+h1 {
+  margin-left: 0.5em;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.nes-container {
+  margin-bottom: 1em;
+}
+
+.dedication {
+  font-size: 8px;
+  line-height: 1;
+}
+
+section.message-list {
+  display: flex;
+  flex-direction: column;
+}
+.message-list > .message {
+  display: flex;
+  margin-top: 2rem;
+}
+.message-list > .message > .nes-balloon {
+  max-width: 550px;
+}
+.message-list > .message i {
+  align-self: flex-end;
+}
+.message-list > .message.-left {
+  align-self: flex-start;
+}
+.message-list > .message.-right {
+  align-self: flex-end;
+}
+.message-list > .message.-left i {
+  margin-right: 2rem;
+}
+.message-list > .message.-right i {
+  margin-left: 2rem;
+}
+
+#error-container {
+  color: red;
+  margin-top: 1em;
+}
+
+.icon-list > .blur-filter {
+  filter: blur(10px);
+}
+
+table td {
+  font-size: 12px;
+}
+
+table td.left-align {
+  text-align: left;
+}
+
+table .row-green {
+  background-color: #92cc41;
+}
+
+table .row-orange {
+  background-color: #ffae2a;
+}
+
+table .row-red {
+  background-color: #e76e55;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+
+
+footer {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  text-align: center;
+}
