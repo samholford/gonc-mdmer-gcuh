@@ -11,9 +11,10 @@ function resetErrors() {
   document.getElementById("error-container").classList.add("hidden");
 }
 
-// If a 2-digit year is used, assume less than 100 years old
+// If a 2-digit year is used, assume no more than 1 year in future
 moment.parseTwoDigitYear = function(yearString) {
-  return parseInt(yearString) + (parseInt(yearString) > 23 ? 1900 : 2000);
+  var currentYear = moment().get('year') - 2000;
+  return parseInt(yearString) + (parseInt(yearString) > ( currentYear + 1) ? 1900 : 2000);
 };
 
 function loadFile(url, callback) {
@@ -152,8 +153,6 @@ function generate() {
 
   // Link to the template docx - see https://docxtemplater.readthedocs.io/en/latest/tag_types.html
   loadFile("https://samholford.github.io/gonc-mdmer-gcuh/newPatientTemplate.docx", function(
-  //loadFile("https://cdn.glitch.global/05791bde-c49a-4989-adc6-f428eb69ab66/newPatientTemplate.docx?v=1698476082878", function(
-           
     error,
     content
   ) {
